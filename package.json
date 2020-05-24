@@ -1,0 +1,26 @@
+{
+  "name": "randme.me",
+  "version": "1.0.0",
+  "description": "rand(meme)",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stanleynguyen/randme.me.git"
+  },
+  "keywords": [
+    "random",
+    "meme"
+  ],
+  "author": "Stanley Nguyen <hung.ngn.the@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stanleynguyen/randme.me/issues"
+  },
+  "homepage": "https://github.com/stanleynguyen/randme.me#readme",
+  "devDependencies": {
+    "@commonshost/cli": "^6.0.1"
+  }
+}

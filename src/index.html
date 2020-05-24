@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 
 <head>
-  <title>randme.me | 🌚 Meme-as-a-Service</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>rand(meme) | 🌚 Meme-as-a-Service</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
+    type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
   <meta name="description"
     content="Random memes as a Service - Collection of general-purpose, open-source memes. Contribute yours today!" />
-  <meta property="og:title" content="randme.me | 🌚 Meme-as-a-Service" />
+  <meta property="og:title" content="rand(meme) | 🌚 Meme-as-a-Service" />
   <meta property="og:url" content="https://randme.me" />
   <meta property="og:description"
     content="Random memes as a Service - Collection of general-purpose, open-source memes. Contribute yours today!" />
-  <meta property="og:image" content="img/trollface.png" />
-  <meta property="og:image:alt" content="Troll Face" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="300" />
-  <meta property="og:image:height" content="300" />
   <meta property="og:type" content="website" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png" />
@@ -40,38 +39,54 @@
 </head>
 
 <body>
-  <div class="troll">
-    <div class="troll__head">
-      <img class="troll__face" src="https://i.ibb.co/8XVN8CW/trollface.png"
-        srcset="https://i.ibb.co/8XVN8CW/trollface.png 1x, https://i.ibb.co/DW8Byny/trollface-2x.png 2x" alt="Trollface"
-        width="140" height="115">
-      <div class="troll__right-arm">
-        <div class="troll__right-lower-arm">
-          <div class="troll__right-hand"></div>
+  <nav style="padding: 20px; border-bottom: 3px solid #ccc; margin-bottom: 60px;">
+    <div class="container" style="display: flex; align-items: center;">
+      <div class="nav-brand" style="margin-right: auto;">
+        <h3 style="margin-bottom: 0;">
+          rand(meme)
+        </h3>
+      </div>
+      <button type="button" class="nes-btn nes is-success">
+        Submit
+      </button>
+    </div>
+  </nav>
+  <div class="container" style="margin-bottom: 50px;">
+    <div class="row">
+      <div class="col-md-6 col-xs-12" style="padding-left: 1rem; padding-right: 1rem;">
+        <div class="nes-container" style="display: flex; justify-content: center;">
+          <button type="button" style="position: absolute; top: -4px; left: -4px;"
+            class="nes-btn is-primary showcode">Randomize</button>
+          <img style="max-width: 100%; height: auto;" src="https://img.randme.me" />
         </div>
       </div>
-      <div class="troll__left-arm">
-        <div class="troll__left-lower-arm">
-          <div class="troll__left-hand"></div>
-        </div>
-      </div>
-      <div class="troll__upper-body">
-        <div class="troll__lower-body">
-          <div class="troll__right-thigh">
-            <div class="troll__right-lower-leg">
-              <div class="troll__right-foot"></div>
-            </div>
+      <div class="col-md-6 col-xs-12">
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="nes-balloon from-left nes-pointer">
+              Click on this baloon to copy the direct link to the image: <a
+                href="https://img.randme.me">https://img.randme.me</a>
+            </p>
           </div>
-          <div class="troll__left-thigh">
-            <div class="troll__left-lower-leg">
-              <div class="troll__left-foot"></div>
-            </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12" style="padding-left: 1rem; padding-right: 1rem;">
+            <p>Or share via:
+              <br />
+              <a href="https://twitter.com/share?text=rand(meme)%20%7C%20%F0%9F%8C%9A%20Meme-as-a-Service&amp;url=https%3A%2F%2Frandme.me"
+                target="_blank"><i class="nes-icon twitter"></i>
+              </a>
+              <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Frandme.me" target=" _blank">
+                <i class="nes-icon facebook"></i>
+              </a>
+              <a href="https://reddit.com/submit?title=rand(meme)%20%7C%20%F0%9F%8C%9A%20Meme-as-a-Service&amp;url=https%3A%2F%2Frandme.me"
+                target="_blank">
+                <i class="nes-icon reddit"></i>
+              </a>
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="center-text">
-    <h1>Coming Soon</h1>
   </div>
 </body>

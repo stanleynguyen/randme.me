@@ -7,6 +7,7 @@
     type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
   <meta name="description"
     content="Random memes as a Service - Collection of general-purpose, open-source memes. Contribute yours today!" />
   <meta property="og:title" content="rand(meme) | 🌚 Meme-as-a-Service" />
@@ -54,10 +55,11 @@
   <div class="container" style="margin-bottom: 50px;">
     <div class="row">
       <div class="col-md-6 col-xs-12" style="padding-left: 1rem; padding-right: 1rem;">
-        <div class="nes-container" style="display: flex; justify-content: center;">
-          <button type="button" style="position: absolute; top: -4px; left: -4px;"
-            class="nes-btn is-primary showcode">Randomize</button>
-          <img style="max-width: 100%; height: auto;" src="https://img.randme.me" />
+        <div class="nes-container" style="display: flex; flex-direction: column; align-items: center;">
+          <button type="button" style="position: absolute; top: -4px; left: -4px;" class="nes-btn is-primary showcode"
+            id="randomizer">Randomize</button>
+          <img style="max-width: 100%; height: auto; display: none;" src="https://img.randme.me" id="the-meme" />
+          <icon class="nes-icon is-large star is-empty animate" id="meme-loader"></icon>
         </div>
       </div>
       <div class="col-md-6 col-xs-12">
@@ -89,4 +91,5 @@
       </div>
     </div>
   </div>
+  <script src="js/script.js" type="text/javascript"></script>
 </body>

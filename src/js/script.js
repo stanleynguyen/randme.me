@@ -7,6 +7,31 @@ const fileInput = document.querySelector('#submit-dialog input[type="file"]');
 const previewImg = document.querySelector("#previewer .img-fluid");
 dialogPolyfill.registerDialog(dialog);
 
+if (window.location.pathname !== "/") {
+  randomizer.style.display = "none";
+
+  const directLinkToMeme = `https://img.randme.me${window.location.pathname}`;
+  theMeme.src = directLinkToMeme;
+  const bubbleAnchor = document.querySelector("#meme-link");
+  bubbleAnchor.href = directLinkToMeme;
+  bubbleAnchor.textContent = directLinkToMeme;
+
+  const linkToMeme = window.location.href;
+  document.querySelector(
+    "#twitter-share"
+  ).href = `https://twitter.com/share?text=rand(meme)%20%7C%20%F0%9F%8C%9A%20Meme-as-a-Service&amp;url=${encodeURI(
+    linkToMeme
+  )}`;
+  document.querySelector(
+    "#fb-share"
+  ).href = `https://www.facebook.com/sharer.php?u=${encodeURI(linkToMeme)}`;
+  document.querySelector(
+    "#reddit-share"
+  ).href = `https://reddit.com/submit?title=rand(meme)%20%7C%20%F0%9F%8C%9A%20Meme-as-a-Service&amp;url=${encodeURI(
+    linkToMeme
+  )}`;
+}
+
 theMeme.onload = function () {
   memeLoader.style.display = "none";
   theMeme.style.display = "block";

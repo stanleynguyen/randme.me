@@ -5,6 +5,7 @@ const dialogOpener = document.querySelector("#dialog-opener");
 const dialog = document.getElementById("submit-dialog");
 const fileInput = document.querySelector('#submit-dialog input[type="file"]');
 const previewImg = document.querySelector("#previewer .img-fluid");
+const bubbleAnchor = document.querySelector("#meme-link");
 dialogPolyfill.registerDialog(dialog);
 
 if (window.location.pathname !== "/") {
@@ -12,7 +13,6 @@ if (window.location.pathname !== "/") {
 
   const directLinkToMeme = `https://img.randme.me${window.location.pathname}`;
   theMeme.src = directLinkToMeme;
-  const bubbleAnchor = document.querySelector("#meme-link");
   bubbleAnchor.href = directLinkToMeme;
   bubbleAnchor.textContent = directLinkToMeme;
 
@@ -93,4 +93,17 @@ document.querySelector("#submit-btn").onclick = function (e) {
       submitBtn.innerHTML = "Confirm";
       submitBtn.disabled = false;
     });
+};
+
+const copyToClipboard = (str) => {
+  const el = document.createElement("textarea");
+  el.value = str;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand("copy");
+  document.body.removeChild(el);
+};
+
+document.querySelector("#copy-bubble").onclick = function () {
+  copyToClipboard(bubbleAnchor.href);
 };

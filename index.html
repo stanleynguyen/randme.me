@@ -7,6 +7,7 @@
     type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+  <link href="css/dialog-polyfill.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
   <meta name="description"
     content="Random memes as a Service - Collection of general-purpose, open-source memes. Contribute yours today!" />
@@ -47,7 +48,7 @@
           rand(meme)
         </h3>
       </div>
-      <button type="button" class="nes-btn nes is-success">
+      <button type="button" class="nes-btn nes is-success" id="dialog-opener">
         Submit
       </button>
     </div>
@@ -58,7 +59,7 @@
         <div class="nes-container" style="display: flex; flex-direction: column; align-items: center;">
           <button type="button" style="position: absolute; top: -4px; left: -4px;" class="nes-btn is-primary showcode"
             id="randomizer">Randomize</button>
-          <img style="max-width: 100%; height: auto; display: none;" src="https://img.randme.me" id="the-meme" />
+          <img class="img-fluid" style="display: none;" src="https://img.randme.me" id="the-meme" />
           <icon class="nes-icon is-large star is-empty animate" id="meme-loader"></icon>
         </div>
       </div>
@@ -91,5 +92,24 @@
       </div>
     </div>
   </div>
-  <script src="js/script.js" type="text/javascript"></script>
+  <dialog class="nes-dialog fixed" id="submit-dialog">
+    <form method="dialog">
+      <p class="title">Submit your meme</p>
+      <div class="nes-container" id="previewer"
+        style="display: none; flex-direction: column; align-items: center; margin-bottom: 17px;">
+        <img src="https://img.randme.me" class="img-fluid" />
+      </div>
+      <label class="nes-btn">
+        <span>Select your file</span>
+        <input type="file">
+      </label>
+      <menu class="dialog-menu">
+        <button class="nes-btn">Cancel</button>
+        <button class="nes-btn is-primary" id="submit-btn">Confirm</button>
+      </menu>
+      <p class="nes-text is-error" style="display: none;">Something went wrong!</p>
+    </form>
+  </dialog>
+  <script type="text/javascript" src="js/dialog-polyfill.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>

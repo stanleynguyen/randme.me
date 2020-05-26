@@ -16,6 +16,9 @@ if (window.location.pathname !== "/") {
   theMeme.src = directLinkToMeme;
   bubbleAnchor.href = directLinkToMeme;
   bubbleAnchor.textContent = directLinkToMeme;
+  document.querySelector(
+    'meta[property="og:image"]'
+  ).content = directLinkToMeme;
 
   const linkToMeme = window.location.href;
   document.querySelector(

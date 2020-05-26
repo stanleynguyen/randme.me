@@ -311,6 +311,7 @@
 }
 #previewer .img-fluid {
   max-width: 400px;
+  max-height: 60vh;
 }
 
 .nes-balloon {

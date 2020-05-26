@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 @-webkit-keyframes starloading {
   75% {
     color: #ebe527;
@@ -316,11 +309,51 @@
 
 .nes-balloon {
   -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
   -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
   max-width: calc(100% - 16px);
   word-wrap: break-word;
+}
+
+#randomizer {
+  position: fixed;
+  bottom: 25px;
+  right: 2rem;
+  z-index: 2;
+}
+
+#the-meme {
+  display: none;
+  max-width: 100%;
+}
+#meme-viewer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media only screen and (min-width: 64em) {
+  #the-meme {
+    max-width: 500px;
+  }
+  #randomizer {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    bottom: auto;
+    right: auto;
+    z-index: 2;
+  }
+  .nes-container {
+    padding-top: 3.1rem;
+    padding-bottom: 3.1rem;
+  }
 }

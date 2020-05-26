@@ -10,6 +10,7 @@ dialogPolyfill.registerDialog(dialog);
 
 if (window.location.pathname !== "/") {
   randomizer.style.display = "none";
+  document.querySelector("#direct-wording").textContent = "this meme";
 
   const directLinkToMeme = `https://img.randme.me${window.location.pathname}`;
   theMeme.src = directLinkToMeme;
@@ -37,11 +38,18 @@ theMeme.onload = function () {
   theMeme.style.display = "block";
 };
 
-randomizer.onclick = function () {
+randomizer.onclick = randomize;
+document.addEventListener("keydown", function (e) {
+  if (e && e.keyCode == 32) {
+    randomize();
+  }
+});
+
+function randomize() {
   memeLoader.style.display = "block";
   theMeme.style.display = "none";
   theMeme.src = "https://img.randme.me?" + Date.now();
-};
+}
 
 dialogOpener.onclick = function () {
   dialog.showModal();

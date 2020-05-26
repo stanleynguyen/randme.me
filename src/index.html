@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<head>
+  <title>rand(meme) | 🌚 Meme-as-a-Service</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
+    type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+  <link href="css/dialog-polyfill.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <meta name="description"
+    content="Random memes as a Service - Collection of general-purpose, open-source memes. Contribute yours today!" />
+  <meta property="og:title" content="rand(meme) | 🌚 Meme-as-a-Service" />
+  <meta property="og:url" content="https://randme.me" />
+  <meta property="og:description"
+    content="Random memes as a Service - Collection of general-purpose, open-source memes. Contribute yours today!" />
+  <meta property="og:type" content="website" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="img/favicon/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="img/favicon/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="randmeme" />
+  <meta name="msapplication-TileColor" content="#171717" />
+  <meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="img/favicon/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="img/favicon/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="img/favicon/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="img/favicon/mstile-310x310.png" />
+  <meta name="theme-color" content="#171717">
+</head>
+
+<body>
+  <nav style="padding: 20px; border-bottom: 3px solid #ccc; margin-bottom: 60px;">
+    <div class="container" style="display: flex; align-items: center;">
+      <div class="nav-brand" style="margin-right: auto;">
+        <a href="/" style="color: inherit; text-decoration: none;">
+          <h3 style="margin-bottom: 0;">
+            rand(meme)
+          </h3>
+        </a>
+      </div>
+      <button type="button" class="nes-btn nes is-success" id="dialog-opener">
+        Submit
+      </button>
+    </div>
+  </nav>
+  <div class="container" style="margin-bottom: 50px;">
+    <div class="row">
+      <div class="col-md-6 col-xs-12" style="padding-left: 1rem; padding-right: 1rem;">
+        <div class="nes-container"
+          style="display: flex; flex-direction: column; align-items: center; padding-top: 3.1rem; padding-bottom: 3.1rem;">
+          <button type="button" style="position: absolute; top: -4px; left: -4px;" class="nes-btn is-primary showcode"
+            id="randomizer">Randomize</button>
+          <img class="img-fluid" style="display: none;" src="https://img.randme.me" id="the-meme" />
+          <icon class="nes-icon is-large star is-empty animate" id="meme-loader"></icon>
+        </div>
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="nes-balloon from-left nes-pointer" id="copy-bubble">
+              Click on this balloon to copy the direct link to <span id="direct-wording">a random meme</span>: <a
+                href="https://img.randme.me" id="meme-link">https://img.randme.me</a>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12" style="padding-left: 1rem; padding-right: 1rem;">
+            <p>Or share via:
+              <br />
+              <a href="https://twitter.com/share?text=rand(meme)%20%7C%20%F0%9F%8C%9A%20Meme-as-a-Service&url=https%3A%2F%2Frandme.me"
+                target="_blank" id="twitter-share"><i class="nes-icon twitter"></i>
+              </a>
+              <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Frandme.me" target=" _blank" id="fb-share">
+                <i class="nes-icon facebook"></i>
+              </a>
+              <a href="https://reddit.com/submit?title=rand(meme)%20%7C%20%F0%9F%8C%9A%20Meme-as-a-Service&url=https%3A%2F%2Frandme.me"
+                target="_blank" id="reddit-share">
+                <i class="nes-icon reddit"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <dialog class="nes-dialog fixed" id="submit-dialog">
+    <form method="dialog">
+      <p class="title">Submit your meme</p>
+      <div class="nes-container" id="previewer"
+        style="display: none; flex-direction: column; align-items: center; margin-bottom: 17px;">
+        <img src="https://img.randme.me" class="img-fluid" />
+      </div>
+      <label class="nes-btn">
+        <span>Select your file</span>
+        <input type="file" accept="image/*">
+      </label>
+      <menu class="dialog-menu">
+        <button class="nes-btn">Cancel</button>
+        <button class="nes-btn is-primary" id="submit-btn">Confirm</button>
+      </menu>
+      <p class="nes-text is-error" style="display: none;">Something went wrong!</p>
+    </form>
+  </dialog>
+  <script type="text/javascript" src="js/dialog-polyfill.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>

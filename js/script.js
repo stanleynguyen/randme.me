@@ -19,7 +19,7 @@ if (window.location.pathname !== "/") {
   const linkToMeme = window.location.href;
   document.querySelector(
     "#twitter-share"
-  ).href = `https://twitter.com/share?text=rand(meme)%20%7C%20%F0%9F%8C%9A%20Meme-as-a-Service&amp;url=${encodeURI(
+  ).href = `https://twitter.com/share?text=rand(meme)%20%7C%20%F0%9F%8C%9A%20Meme-as-a-Service&url=${encodeURI(
     linkToMeme
   )}`;
   document.querySelector(
@@ -27,7 +27,7 @@ if (window.location.pathname !== "/") {
   ).href = `https://www.facebook.com/sharer.php?u=${encodeURI(linkToMeme)}`;
   document.querySelector(
     "#reddit-share"
-  ).href = `https://reddit.com/submit?title=rand(meme)%20%7C%20%F0%9F%8C%9A%20Meme-as-a-Service&amp;url=${encodeURI(
+  ).href = `https://reddit.com/submit?title=rand(meme)%20%7C%20%F0%9F%8C%9A%20Meme-as-a-Service&url=${encodeURI(
     linkToMeme
   )}`;
 }

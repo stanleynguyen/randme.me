@@ -323,6 +323,9 @@
   right: 2rem;
   z-index: 2;
 }
+#randomizer + .nes-balloon {
+  display: none;
+}
 
 #the-meme {
   display: none;
@@ -351,6 +354,15 @@
     bottom: auto;
     right: auto;
     z-index: 2;
+  }
+  #randomizer:hover + .nes-balloon {
+    display: block;
+    color: #212529;
+    position: absolute;
+    z-index: 1;
+    width: 500px;
+    top: -105px;
+    left: 0;
   }
   .nes-container {
     padding-top: 3.1rem;

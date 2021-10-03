@@ -4,9 +4,8 @@
   "description": "rand(meme)",
   "main": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "ch": "commonshost",
-    "manifest:gen": "manifest generate -r src/"
+    "start": "http-server src/",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -23,7 +22,6 @@
   },
   "homepage": "https://github.com/stanleynguyen/randme.me#readme",
   "devDependencies": {
-    "@commonshost/cli": "^6.0.1",
-    "@commonshost/manifest": "^3.0.1"
+    "http-server": "^13.0.2"
   }
 }
